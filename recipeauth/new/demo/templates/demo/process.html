@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Process of Recipe</title>
+</head>
+<body>
+<form method='post'>
+    {% csrf_token %}
+
+    Name of the Recipe:  <input type="text" name="name"><br>
+    Ingrediants:<input type="text" name="ingrediants"><br>
+    Process :<input type="text" name="process"><br>
+    <input type="submit" value="Save"><br>
+
+</form>
+<a class="btn btn-primary btn-1g" href="{% url 'demo:logout' %}" role="button" > LOGOUT </a>
+</body>

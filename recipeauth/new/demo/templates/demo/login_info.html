@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN PAGE</title>
+</head>
+<body>
+<form action="/demo/validate/" method="post">
+    {% csrf_token %}
+email<input type="email" name="email"><br>
+password<input type="password" name="password"><br>
+<input type="submit" value="Login"><br>
+
+</form>
+    <a href="{% url 'demo:reg' %}">REGISTER</a>
+</body>
+</html>

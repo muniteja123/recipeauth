@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DETAILS PAGE</title>
+</head>
+<body>
+<form>
+{% if con %}
+      name : {{ con.name }} <br>
+      Ingrediants : {{ con.ingredients }}<br>
+      Process : {{ con.process }}<br>
+{% endif %}
+<a href="{% url 'demo:home' %}">Back</a><br>
+<a class="btn btn-primary btn-1g" href="{% url 'demo:logout' %}" role="button" > LOGOUT </a>
+</form>
+</body>
+
+</html>

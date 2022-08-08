@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTRATION PAGE</title>
+</head>
+<body>
+<form method='post'>
+    {% csrf_token %}
+
+    email:  <input type="email" name="email"><br>
+    password:<input type="password" name="password"><br>
+    <input type="submit" value="Save"><br>
+
+</form>
+</body>
+</html>

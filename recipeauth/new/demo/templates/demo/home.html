@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MENU</title>
+</head>
+<body>
+{% if context %}
+    {% for each in context %}
+<a href="/demo/details/{{ each.id }}">{{each.name}}</a><br>
+    {% endfor %}
+{% endif %}
+</body>
+</html>
+
+<a class="btn btn-primary btn-1g" href="/demo/process/" role="button"> CREATE </a><br>
+<a class="btn btn-primary btn-1g" href="{% url 'demo:logout' %}" role="button" > LOGOUT </a>
